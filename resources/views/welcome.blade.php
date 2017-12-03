@@ -15,3 +15,5 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <a href="{{ route('blog.index') }}" class="btn btn-info">Blogs</a>
 <a href="{{ route('blog.create') }}" class="btn btn-primary">Add New Blog</a>
+
+@stop
