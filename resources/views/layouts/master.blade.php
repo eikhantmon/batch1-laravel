@@ -5,6 +5,7 @@
  	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>My Blog</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" >
 
 </head>
 <body>

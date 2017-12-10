@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>Blog List - <a href="/blog/create">Create Blog</a></h1>
+<h1>Blog List - <a href="{{ route('blog.create') }}">Create Blog</a></h1>
 
 <hr>
 
@@ -13,17 +13,17 @@
 @endif
 
 @foreach($blogs as $blog)
-	<!-- <a href="/blog/{{ $blog->id }}">
+	<a href="{{ route('blog.update', ['id' => $blog->id]) }}">
 		<h1>{{ $blog->title }}</h1>
 	</a>
- -->
-	<h1>{{ $blog->title }}</h1>
+
+	
 	<p>
-		{{ str_limit($blog->description, 20) }}
+		{!! str_limit($blog->description, 200) !!}
 
 	<p>
 	<p>
-		<a href="/blog/{{ $blog->id }}/edit">Edit</a>
+		<a href="{{ route('blog.edit', ['id'=> $blog->id]) }}" class="btn btn-primary">Edit</a>
 		<form action="{{ route('blog.destroy', ['id' => $blog->id]) }}" method="post" accept-charset="utf-8">
 			{{ csrf_field() }}
 			<input type="hidden" name="_method" value="Delete">
